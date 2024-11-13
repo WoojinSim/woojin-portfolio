@@ -1,0 +1,16 @@
+.typingLabel {
+  font-family: "NanumSquareNeoHeavy";
+  border-right: 8px solid #03aeefff;
+  padding-right: 4px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    border-right: 8px solid #03aeef00;
+  }
+  50% {
+    border-right: 8px solid #03aeefff;
+  }
+}

@@ -1,0 +1,36 @@
+.wrap {
+  margin: 0;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  display: block;
+  position: relative;
+}
+
+.headContainer {
+  box-sizing: border-box;
+  height: 100vh;
+  position: relative;
+}
+
+.headLabelContainer {
+  position: absolute;
+  top: 46%;
+  left: 15%;
+  transform: translateY(-50%);
+  font-size: 52px;
+}
+
+.introduceContainer {
+  background-color: white;
+  box-sizing: border-box;
+  padding: 30px;
+  margin: 0 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+.introduceContainer.name {
+  font-family: "NanumSquareNeoHeavy";
+}
