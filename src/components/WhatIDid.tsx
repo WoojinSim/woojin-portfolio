@@ -45,7 +45,7 @@ const WhatIDid: React.FC = () => {
             <span css={itemSubtitleLabel}>3인 프로젝트</span>
           </div>
           <div css={itemDescriptionContainer}>
-            <span css={itemDescriptionTitleLabel}>여행정보 제공 웹앱</span>
+            <span css={itemDescriptionTitleLabel}>설래임이 지속되는 여행 정보 제공 웹앱</span>
             <ul css={itemDescriptionList}>
               <li>설래는 여행을 앞두고 여행정보를 찾는 과정에서 지쳐버리는 사람들을 위해 개발</li>
               <li>GPT와 DeepL 번역기를 활용한 여행지 소식의 번역 및 요약기능 구현</li>
@@ -62,7 +62,7 @@ const WhatIDid: React.FC = () => {
             <span css={itemSubtitleLabel}>3인 프로젝트</span>
           </div>
           <div css={itemDescriptionContainer}>
-            <span css={itemDescriptionTitleLabel}>공공데이터 기반 복약지도 어플리케이션</span>
+            <span css={itemDescriptionTitleLabel}>건강한 삶을 위한 공공데이터 기반 복약지도 어플리케이션</span>
             <ul css={itemDescriptionList}>
               <li>처방받은 약 또는 복용할 약에 대한 관리가 어려운 사람들을 위해 개발</li>
               <li>복용할 의약품에 대한 작용과 부작용을 GPT를 통해 빠르게 제공받는 기능 구현</li>
