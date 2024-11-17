@@ -3,16 +3,9 @@ import React, { useState, useEffect } from "react";
 
 import TypingText from "../components/TypingText";
 import WhatIDid from "../components/WhatIDid";
-
-import {
-  wrap,
-  headContainer,
-  headLabelContainer,
-  boldText,
-  pointedColor,
-  mainContainer,
-  itemTitleLabel,
-} from "./styles/Home.styles";
+import AboutMe from "../components/AboutMe";
+import Skills from "../components/Skills";
+import { wrap, headContainer, headLabelContainer, boldText, pointedColor } from "./styles/Home.styles";
 
 const Home: React.FC = () => {
   const [isTypingComplete, setIsTypingComplete] = useState<boolean>(false);
@@ -35,10 +28,9 @@ const Home: React.FC = () => {
           <span css={isTypingComplete && pointedColor}>.</span>
         </div>
       </div>
-      <div css={mainContainer}>
-        <span css={itemTitleLabel}>지금까지 해온 것</span>
-        <WhatIDid />
-      </div>
+      <AboutMe />
+      <Skills />
+      <WhatIDid />
     </div>
   );
 };

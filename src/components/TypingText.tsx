@@ -17,7 +17,7 @@ const TypingText: React.FC<valuePropsInterface> = ({ setIsTypingComplete }) => {
 
   const pauseTime = 2000;
   const speed = 100;
-  const typingTextList = ["호기심많은", "끈기있는", "긍정적인", "열정적인", "도전하는"];
+  const typingTextList = ["호기심많은", "끈기있는", "잠못자는", "긍정적인", "도전하는"];
 
   useEffect(() => {
     const handleTyping = () => {

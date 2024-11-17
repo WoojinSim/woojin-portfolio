@@ -45,13 +45,17 @@ export const contentContainer = css({
   boxShadow: "0 0 10px 1px rgba(0, 0, 0, 0.1)",
 });
 
-export const mainContainer = css({
-  padding: "0 20% 100px",
-});
-
-export const itemTitleLabel = css({
-  fontFamily: "NanumSquareNeoExtraBold",
-  fontSize: "38px",
-  margin: "100px 0 50px",
-  display: "block",
-});
+export const mainContainer = {
+  aboutMe: css({
+    padding: "100px 20% 100px",
+  }),
+  pastWorks: css({
+    padding: "100px 20% 100px",
+  }),
+  currentWorks: css({
+    padding: "100px 20% 100px",
+    backgroundColor: "#fafafa",
+    backgroundImage: "linear-gradient(45deg, #f1f3f5 1px, transparent 1px)",
+    backgroundSize: "6px 6px",
+  }),
+};
