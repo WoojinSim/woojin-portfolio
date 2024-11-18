@@ -5,6 +5,7 @@ export const wrap = css({
   boxSizing: "border-box",
   minHeight: "100vh",
   position: "relative",
+  cursor: "default",
 });
 
 export const headContainer = css({

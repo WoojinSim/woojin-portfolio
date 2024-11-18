@@ -7,7 +7,7 @@ import { mainContainer, itemTitleLabel, categoryContainer, categoryLabel, skills
 const Skills: React.FC = () => {
   return (
     <div css={mainContainer}>
-      <span css={itemTitleLabel}>할 수 있는 것들</span>
+      <span css={itemTitleLabel}>할 수 있는 것</span>
 
       <div css={categoryContainer}>
         <span css={categoryLabel}>언어</span>

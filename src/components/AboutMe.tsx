@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import React, { useState, useEffect } from "react";
-
-import { mainContainer, itemTitleLabel, titleLabel, contentLabel } from "./styles/AboutMe.styles";
+import { FaGithub } from "react-icons/fa";
+import { mainContainer, itemTitleLabel, titleLabel, contentLabel, urlContainer, urlBtn } from "./styles/AboutMe.styles";
 
 const AboutMe: React.FC = () => {
   return (
@@ -17,6 +17,11 @@ const AboutMe: React.FC = () => {
       <span css={contentLabel}>
         저는, 더욱더 완성도 높은 결과물 빚어내기 위해 노력하고 있는 <strong>심우진</strong>입니다.
       </span>
+      <div css={urlContainer}>
+        <a href="https://github.com/WoojinSim" target="_blank" rel="noopener noreferrer" css={urlBtn}>
+          <FaGithub size={24} /> <span>GitHub</span>
+        </a>
+      </div>
     </div>
   );
 };
