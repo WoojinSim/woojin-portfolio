@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/woojin-portfolio/static/js/main.7eca5142.js",
+    "main.js": "/woojin-portfolio/static/js/main.ce0aae4c.js",
     "index.html": "/woojin-portfolio/index.html",
-    "main.7eca5142.js.map": "/woojin-portfolio/static/js/main.7eca5142.js.map"
+    "main.ce0aae4c.js.map": "/woojin-portfolio/static/js/main.ce0aae4c.js.map"
   },
   "entrypoints": [
-    "static/js/main.7eca5142.js"
+    "static/js/main.ce0aae4c.js"
   ]
 }
