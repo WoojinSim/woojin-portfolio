@@ -49,13 +49,6 @@ const Skills: React.FC = () => {
           </li>
         </ul>
       </div>
-
-      <div css={categoryContainer}>
-        <span css={categoryLabel}>데브옵스</span>
-        <ul css={skillsList}>
-          <li>TODO: 추가예정</li>
-        </ul>
-      </div>
     </div>
   );
 };
