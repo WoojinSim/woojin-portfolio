@@ -76,7 +76,7 @@ export const itemDescriptionTitleLabel = css({
 });
 
 export const itemDescriptionList = css({
-  margin: "0",
+  marginBottom: "8px",
   paddingLeft: "20px",
   fontFamily: "NanumSquareNeo",
   fontSize: "0.870rem",
@@ -106,5 +106,3 @@ export const itemUsedLanguageContainer = css({
     color: "#666",
   },
 });
-
-export const itemUsedLanguageSpan = css({});

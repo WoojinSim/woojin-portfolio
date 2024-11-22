@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import React from "react";
-
+import { FaGithub } from "react-icons/fa";
 import {
   mainContainer,
   mainTitleLabel,
@@ -32,13 +32,22 @@ const WhatIDid: React.FC = () => {
               <li>GOP에서 영상감시병으로 군복무 중 상황발생시 빠른 전파와 추적관리를 위해 개발</li>
               <li>폐쇄망 내부에서 Windows의 기본 환경과 ASP Classic을 활용하여 개발</li>
               <li>기존의 시스템과 잘 맞물려 작동시키기 위해 서버 상태를 추적하며 기능 구현</li>
-              <li>상황 처리 속도와 효율이 큰 폭으로 향상돼 표창장 수상과 함께 현재까지도 사용중 </li>
+              <li>상황 처리 속도와 효율이 큰 폭으로 향상돼 표창장 수여와 함께 현재까지도 사용중 </li>
             </ul>
             <div css={itemUsedLanguageContainer}>HTML, CSS, JavaScript, Classic ASP</div>
           </div>
         </div>
         <div css={itemContainer}>
-          <span css={itemTitleLabel}>Journey Hub</span>
+          <span css={itemTitleLabel}>
+            <a
+              href="https://github.com/WoojinSim/travel-guider"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="클릭시 깃허브로 이동"
+            >
+              Journey Hub
+            </a>
+          </span>
           <div css={itemSubtitleContainer}>
             <span css={itemSubtitleLabel}>2023.09</span>
             <span css={itemSubtitleLabel}>3인 프로젝트</span>
@@ -47,6 +56,7 @@ const WhatIDid: React.FC = () => {
             <span css={itemDescriptionTitleLabel}>설래임이 지속되는 여행 정보 제공 웹앱</span>
             <ul css={itemDescriptionList}>
               <li>설래는 여행을 앞두고 여행정보를 찾는 과정에서 지쳐버리는 사람들을 위해 개발</li>
+              <li>여러개의 API와 통신을 하며 동작하여 개별 상태관리를 통해 빠른 응답 속도 구현</li>
               <li>GPT와 DeepL 번역기를 활용한 여행지 소식의 번역 및 요약기능 구현</li>
               <li>여행지에 대한 다양한 정보(환율,날씨,여행경보 등)를 제공하는 기능 구현</li>
             </ul>
@@ -54,7 +64,16 @@ const WhatIDid: React.FC = () => {
           </div>
         </div>
         <div css={itemContainer}>
-          <span css={itemTitleLabel}>약藥속</span>
+          <span css={itemTitleLabel}>
+            <a
+              href="https://github.com/WoojinSim/medicine-alarm"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="클릭시 깃허브로 이동"
+            >
+              약藥속
+            </a>
+          </span>
           <div css={itemSubtitleContainer}>
             <span css={itemSubtitleLabel}>2024.04</span>
             <span css={itemSubtitleLabel}>3인 프로젝트</span>
@@ -63,15 +82,24 @@ const WhatIDid: React.FC = () => {
             <span css={itemDescriptionTitleLabel}>건강한 삶을 위한 공공데이터 기반 복약지도 어플리케이션</span>
             <ul css={itemDescriptionList}>
               <li>처방받은 약 또는 복용할 약에 대한 관리가 어려운 사람들을 위해 개발</li>
+              <li>고령층 사용자를 위한 UI/UX 설계에 중점을 두어 개발</li>
               <li>복용할 의약품에 대한 작용과 부작용을 GPT를 통해 빠르게 제공받는 기능 구현</li>
-              <li>여행지에 대한 다양한 정보(환율,날씨,경보 등)를 제공하는 기능 구현</li>
               <li>교내 경진대회에서 은상 수상</li>
             </ul>
             <div css={itemUsedLanguageContainer}>React Native, TypeScript, Expo, Spring, MySQL, AWS</div>
           </div>
         </div>
         <div css={itemContainer}>
-          <span css={itemTitleLabel}>나의 포트폴리오</span>
+          <span css={itemTitleLabel}>
+            <a
+              href="https://github.com/WoojinSim/woojin-portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="클릭시 깃허브로 이동"
+            >
+              나의 포트폴리오
+            </a>
+          </span>
           <div css={itemSubtitleContainer}>
             <span css={itemSubtitleLabel}>2024.11</span>
             <span css={itemSubtitleLabel}>1인 프로젝트</span>
