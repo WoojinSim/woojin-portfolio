@@ -13,7 +13,10 @@ import {
   itemDescriptionContainer,
   itemDescriptionList,
   itemUsedLanguageContainer,
+  itemDetailButton,
 } from "./styles/WhatIDid.styles";
+
+// TODO: 프로젝트 제목 강조, 카드 순서 역순, 상세페이지 추가, 목적 하이라이팅
 
 const WhatIDid: React.FC = () => {
   return (
@@ -21,6 +24,9 @@ const WhatIDid: React.FC = () => {
       <span css={mainTitleLabel}>지금까지 해온 것</span>
       <div css={mainGridContainer}>
         <div css={itemContainer}>
+          <span className="itemDetailButton" css={itemDetailButton}>
+            클릭하여 자세히 보기
+          </span>
           <span css={itemTitleLabel}>상황조치도우미</span>
           <div css={itemSubtitleContainer}>
             <span css={itemSubtitleLabel}>2022.06</span>
@@ -38,6 +44,9 @@ const WhatIDid: React.FC = () => {
           </div>
         </div>
         <div css={itemContainer}>
+          <span className="itemDetailButton" css={itemDetailButton}>
+            클릭하여 자세히 보기
+          </span>
           <span css={itemTitleLabel}>
             <a
               href="https://github.com/WoojinSim/travel-guider"
@@ -64,6 +73,9 @@ const WhatIDid: React.FC = () => {
           </div>
         </div>
         <div css={itemContainer}>
+          <span className="itemDetailButton" css={itemDetailButton}>
+            클릭하여 자세히 보기
+          </span>
           <span css={itemTitleLabel}>
             <a
               href="https://github.com/WoojinSim/medicine-alarm"
@@ -101,6 +113,9 @@ const WhatIDid: React.FC = () => {
             </a>
           </span>
           <div css={itemSubtitleContainer}>
+            <span className="itemDetailButton" css={itemDetailButton}>
+              클릭하여 자세히 보기
+            </span>
             <span css={itemSubtitleLabel}>2024.11</span>
             <span css={itemSubtitleLabel}>1인 프로젝트</span>
           </div>

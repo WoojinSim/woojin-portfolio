@@ -2,6 +2,9 @@ import { css } from "@emotion/react";
 
 export const mainContainer = css({
   padding: "100px 20% 100px",
+  "@media screen and (max-width: 768px)": {
+    padding: "100px 5% 100px",
+  },
 });
 
 export const mainTitleLabel = css({
@@ -27,13 +30,14 @@ export const itemTitleLabel = css({
 });
 
 export const itemContainer = css({
+  position: "relative",
   display: "inline-block",
   borderRadius: "16px",
   border: "1px solid rgba(0, 0, 0, 0.06)",
   boxShadow: "0 1px 3px rgba(0, 0, 0, 0.1)",
   padding: "24px",
   overflow: "hidden",
-  cursor: "default",
+  cursor: "pointer",
   alignSelf: "start",
   transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
   background: "#ffffff",
@@ -42,7 +46,24 @@ export const itemContainer = css({
     transform: "translateY(-8px)",
     boxShadow: "0 20px 40px rgba(0, 0, 0, 0.12)",
     background: "#fafafa",
+    "& .itemDetailButton": {
+      top: "10%",
+    },
   },
+});
+
+export const itemDetailButton = css({
+  position: "absolute",
+  top: "-10%",
+  right: "50%",
+  transform: "translateX(50%)",
+  background: "rgba(0, 0, 0, 0.5)",
+  color: "#FFF",
+  padding: "5px 10px",
+  borderRadius: "5px",
+  fontFamily: "NanumSquareNeoBold",
+  fontSize: "0.875rem",
+  transition: "all 0.3s ease",
 });
 
 export const itemSubtitleContainer = css({

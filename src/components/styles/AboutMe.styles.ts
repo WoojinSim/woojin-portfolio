@@ -2,6 +2,9 @@ import { css } from "@emotion/react";
 
 export const mainContainer = css({
   padding: "100px 20% 100px",
+  "@media screen and (max-width: 768px)": {
+    padding: "100px 5% 100px",
+  },
 });
 
 export const itemTitleLabel = css({
@@ -13,7 +16,7 @@ export const itemTitleLabel = css({
 
 export const titleLabel = css({
   display: "block",
-  fontSize: "26px", // 크기 증가
+  fontSize: "1.625rem", // 크기 증가
   fontFamily: "NanumSquareNeoBold",
   marginBottom: "25px", // 여백 증가
   lineHeight: "1.4",
@@ -65,4 +68,57 @@ export const urlBtn = css({
     // 호버 시 텍스트 표시
     width: "62px",
   },
+});
+
+export const profileContainer = css({
+  marginBottom: "100px",
+  display: "grid",
+  gridTemplateColumns: "auto 1fr",
+  alignItems: "center",
+  gap: "2rem",
+});
+
+export const profileImage = css({
+  width: "140px",
+  height: "140px",
+  borderRadius: "50%",
+  backgroundColor: "#F0F0F0",
+  color: "#999999",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+});
+
+export const profileItemWrapper = css({
+  display: "grid",
+  gridTemplateColumns: "repeat(3, minmax(160px, 1fr))",
+  gap: "2rem",
+  listStyle: "none",
+  padding: 0,
+  margin: 0,
+  marginLeft: "1rem",
+  width: "100%",
+  "@media screen and (max-width: 768px)": {
+    marginLeft: "0",
+    gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+  },
+});
+
+export const profileItem = css({});
+
+export const profileItemLabel = css({
+  display: "block",
+  fontSize: "1.125rem",
+  fontFamily: "NanumSquareNeo",
+  fontWeight: "bold",
+  color: "#2d2d2d",
+  marginBottom: "8px",
+});
+
+export const profileItemContent = css({
+  display: "block",
+  fontSize: "1rem",
+  fontFamily: "NanumSquareNeo",
+  lineHeight: "1.5",
+  color: "#4a4a4a",
 });
