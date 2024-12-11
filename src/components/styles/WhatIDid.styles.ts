@@ -96,7 +96,18 @@ export const itemDescriptionTitleLabel = css({
   lineHeight: "1.4",
 });
 
+export const itemDescriptionSubTitleLabel = css({
+  display: "block",
+  marginBottom: "8px",
+  fontFamily: "NanumSquareNeo",
+  fontSize: "0.870rem",
+  color: "#444444",
+  letterSpacing: "-0.01em",
+  lineHeight: "1.4",
+});
+
 export const itemDescriptionList = css({
+  marginTop: "0",
   marginBottom: "8px",
   paddingLeft: "20px",
   fontFamily: "NanumSquareNeo",

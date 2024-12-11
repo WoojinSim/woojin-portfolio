@@ -35,6 +35,7 @@ const Skills: React.FC = () => {
   return (
     <div css={mainContainer}>
       <span css={itemTitleLabel}>할 수 있는 것</span>
+
       <div css={categoryContainer}>
         <span css={categoryTitle}>언어</span>
         <div css={categorySubContainer}>
@@ -83,6 +84,7 @@ const Skills: React.FC = () => {
 
       <div css={categoryContainer}>
         <span css={categoryTitle}>라이브러리</span>
+
         <div css={categorySubContainer}>
           <span css={categorySubTitle}>주로 사용</span>
           <ul css={skillsList}>

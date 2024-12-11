@@ -22,8 +22,11 @@ export const categoryContainer = css({
   alignItems: "stretch",
   margin: "1rem 0",
   columnGap: "1rem",
+  "@media screen and (max-width: 768px)": {
+    flexDirection: "column",
+    rowGap: "1rem",
+  },
 });
-
 export const categoryTitle = css({
   display: "inline-flex",
   width: "20rem",
@@ -33,11 +36,14 @@ export const categoryTitle = css({
   fontSize: "1.5rem",
   color: "#0984E3",
   "@media screen and (max-width: 768px)": {
-    fontSize: "1.25rem",
+    fontSize: "1.5rem",
+    marginTop: "1rem",
+    width: "100%",
   },
 });
 
 export const categorySubContainer = css({
+  boxSizing: "border-box",
   width: "100%",
   alignItems: "center",
   padding: "1rem",
