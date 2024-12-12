@@ -10,7 +10,7 @@ export const modalWrap = css({
   width: "100%",
   height: "100%",
   backgroundColor: "rgba(0, 0, 0, 0.5)",
-  padding: "50px 450px",
+  padding: "50px 25%",
   boxSizing: "border-box",
   "@media screen and (max-width: 768px)": {
     padding: "50px 20px",
