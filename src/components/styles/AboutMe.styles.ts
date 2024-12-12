@@ -76,6 +76,9 @@ export const profileContainer = css({
   gridTemplateColumns: "auto 1fr",
   alignItems: "center",
   gap: "2rem",
+  "@media screen and (max-width: 768px)": {
+    gridTemplateColumns: "1fr",
+  },
 });
 
 export const profileImage = css({
@@ -87,6 +90,11 @@ export const profileImage = css({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
+  "@media screen and (max-width: 768px)": {
+    width: "160px",
+    height: "160px",
+    margin: "0 auto",
+  },
 });
 
 export const profileItemWrapper = css({

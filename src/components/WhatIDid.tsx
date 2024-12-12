@@ -28,14 +28,18 @@ type WhatIDidWork = "Alarm" | "JourneyHub" | "MedicineAlarm" | "Portfolio";
 const WhatIDid: React.FC = () => {
   const [activeModal, setActiveModal] = useState<WhatIDidWork | null>(null);
 
+  // 모달 열기
   const handleModalOpen = (modal: WhatIDidWork) => {
+    window.history.pushState({}, "");
     setActiveModal(modal);
   };
 
+  // 모달 닫기
   const handleModalClose = () => {
     setActiveModal(null);
   };
 
+  // 스크롤 제어
   useEffect(() => {
     if (activeModal) {
       document.body.style.overflow = "hidden";
@@ -43,6 +47,18 @@ const WhatIDid: React.FC = () => {
       document.body.style.overflow = "auto";
     }
   }, [activeModal]);
+
+  useEffect(() => {
+    const handlePopState = (e: PopStateEvent) => {
+      if (e.state) {
+        handleModalClose();
+      }
+    };
+    window.addEventListener("popstate", handlePopState);
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, []);
 
   return (
     <div css={mainContainer}>

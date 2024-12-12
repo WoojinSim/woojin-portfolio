@@ -18,6 +18,9 @@ export const mainGridContainer = css({
   display: "grid",
   gridTemplateColumns: "repeat(auto-fill, minmax(400px, 1fr))",
   gap: "20px",
+  "@media screen and (max-width: 768px)": {
+    gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+  },
 });
 
 export const itemTitleLabel = css({
@@ -35,6 +38,7 @@ export const itemContainer = css({
   borderRadius: "16px",
   border: "1px solid rgba(0, 0, 0, 0.06)",
   boxShadow: "0 1px 3px rgba(0, 0, 0, 0.1)",
+  boxSizing: "border-box",
   padding: "24px",
   overflow: "hidden",
   cursor: "pointer",
