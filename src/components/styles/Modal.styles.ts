@@ -63,7 +63,8 @@ export const modalCloseButton = css({
 });
 
 export const modalTitleLabel = css({
-  display: "block",
+  display: "flex",
+  alignItems: "center",
   fontFamily: "NanumSquareNeoHeavy",
   fontSize: "1.8rem",
   background: "linear-gradient(45deg, #1e40af, #3b82f6)",
@@ -71,6 +72,17 @@ export const modalTitleLabel = css({
   WebkitTextFillColor: "transparent",
   letterSpacing: "-0.02em",
   marginBottom: "4px",
+});
+
+export const modalGithubBtn = css({
+  display: "inline-flex",
+  alignItems: "center",
+  marginLeft: "8px",
+  color: "#454545",
+  textDecoration: "none",
+  svg: {
+    fill: "#1e40af",
+  },
 });
 
 export const modalSubtitleContainer = css({
@@ -95,7 +107,7 @@ export const modalDescriptionContainer = css({
     display: "block",
     marginLeft: "10px",
     marginBottom: "16px",
-    lineHeight: "1.65",
+    lineHeight: "1.7",
     color: "#333",
     wordBreak: "keep-all",
     strong: {
@@ -103,14 +115,7 @@ export const modalDescriptionContainer = css({
     },
   },
   "&::-webkit-scrollbar": {
-    width: "4px",
-  },
-  "&::-webkit-scrollbar-thumb": {
-    backgroundColor: "#00000020",
-    borderRadius: "2px",
-  },
-  "&::-webkit-scrollbar-track": {
-    backgroundColor: "#00000000",
+    display: "none",
   },
   "span.title": {
     display: "inline-block",
