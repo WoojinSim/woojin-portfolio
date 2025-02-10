@@ -1,60 +1,140 @@
 /** @jsxImportSource @emotion/react */
 import React, { useState, useEffect } from "react";
-import { SiTypescript, SiJavascript, SiPython, SiReact, SiExpress, SiDocker, SiKubernetes } from "react-icons/si";
+import {
+  SiTypescript,
+  SiJavascript,
+  SiPython,
+  SiReact,
+  SiExpress,
+  SiCplusplus,
+  SiCsharp,
+  SiR,
+  SiDotnet,
+  SiLua,
+  SiNextdotjs,
+  SiFirebase,
+  SiDjango,
+  SiFlask,
+  SiTailwindcss,
+} from "react-icons/si";
 import { FaJava } from "react-icons/fa";
-import { mainContainer, itemTitleLabel, categoryContainer, categoryLabel, skillsList } from "./styles/Skills.styles";
+import {
+  mainContainer,
+  itemTitleLabel,
+  categoryContainer,
+  categoryTitle,
+  categorySubTitle,
+  skillsList,
+  categorySubContainer,
+  skillIcon,
+} from "./styles/Skills.styles";
+
+// TODO: 잘 알고있는 언어 들을 단계별로 나누어 표시
 
 const Skills: React.FC = () => {
   return (
     <div css={mainContainer}>
-      <span css={itemTitleLabel}>할 수 있는 것들</span>
+      <span css={itemTitleLabel}>할 수 있는 것</span>
 
       <div css={categoryContainer}>
-        <span css={categoryLabel}>언어</span>
-        <ul css={skillsList}>
-          <li>
-            <SiTypescript />
-            TypeScript
-          </li>
-          <li>
-            <SiJavascript />
-            JavaScript
-          </li>
-          <li>
-            <SiPython />
-            Python
-          </li>
-          <li>
-            <FaJava />
-            Java
-          </li>
-        </ul>
+        <span css={categoryTitle}>언어</span>
+        <div css={categorySubContainer}>
+          <span css={categorySubTitle}>주로 사용</span>
+          <ul css={skillsList}>
+            <li data-skill="typescript">
+              <SiTypescript css={skillIcon} />
+              TypeScript
+            </li>
+            <li data-skill="javascript">
+              <SiJavascript css={skillIcon} />
+              JavaScript
+            </li>
+            <li data-skill="python">
+              <SiPython css={skillIcon} />
+              Python
+            </li>
+          </ul>
+        </div>
+        <div css={categorySubContainer}>
+          <span css={categorySubTitle}>사용 경험</span>
+          <ul css={skillsList}>
+            <li data-skill="java">
+              <FaJava css={skillIcon} />
+              Java
+            </li>
+            <li data-skill="cplusplus">
+              <SiCplusplus css={skillIcon} />
+              C++
+            </li>
+            <li data-skill="csharp">
+              <SiCsharp css={skillIcon} />
+              C#
+            </li>
+            <li data-skill="asp">🖥️ ASP Classic</li>
+            <li data-skill="r">
+              <SiR css={skillIcon} />R
+            </li>
+            <li data-skill="lua">
+              <SiLua css={skillIcon} />
+              Lua Script
+            </li>
+          </ul>
+        </div>
       </div>
 
       <div css={categoryContainer}>
-        <span css={categoryLabel}>라이브러리</span>
-        <ul css={skillsList}>
-          <li>
-            <SiReact />
-            React
-          </li>
-          <li>
-            <SiReact />
-            React Native
-          </li>
-          <li>🎨 Emotion</li>
-          <li>
-            <SiExpress />
-            Express
-          </li>
-        </ul>
-      </div>
+        <span css={categoryTitle}>라이브러리</span>
 
-      <div css={categoryContainer}>
-        <span css={categoryLabel}>데브옵스</span>
-        <ul css={skillsList}>
-          <li>TODO: 추가예정</li>
-        </ul>
+        <div css={categorySubContainer}>
+          <span css={categorySubTitle}>주로 사용</span>
+          <ul css={skillsList}>
+            <li data-skill="react">
+              <SiReact css={skillIcon} />
+              React
+            </li>
+            <li data-skill="reactnative">
+              <SiReact css={skillIcon} />
+              React Native
+            </li>
+            <li data-skill="emotion">
+              <span css={skillIcon}>🎨</span>
+              Emotion
+            </li>
+            <li data-skill="express">
+              <SiExpress css={skillIcon} />
+              Express
+            </li>
+          </ul>
+        </div>
+        <div css={categorySubContainer}>
+          <span css={categorySubTitle}>사용 경험</span>
+          <ul css={skillsList}>
+            <li data-skill="tailwind">
+              <SiTailwindcss css={skillIcon} />
+              Tailwind
+            </li>
+            <li data-skill="firebase">
+              <SiFirebase css={skillIcon} />
+              Firebase
+            </li>
+            <li data-skill="next">
+              <SiNextdotjs css={skillIcon} />
+              NEXT
+            </li>
+            <li data-skill="django">
+              <SiDjango css={skillIcon} />
+              DJango
+            </li>
+            <li data-skill="flask">
+              <SiFlask css={skillIcon} />
+              Flask
+            </li>
+            <li data-skill="dotnet">
+              <SiDotnet css={skillIcon} />
+              .NET
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );

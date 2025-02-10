@@ -5,6 +5,7 @@ export const wrap = css({
   boxSizing: "border-box",
   minHeight: "100vh",
   position: "relative",
+  cursor: "default",
 });
 
 export const headContainer = css({
@@ -18,8 +19,11 @@ export const headLabelContainer = css({
   position: "absolute",
   top: "46%",
   left: "15%",
+  "@media screen and (max-width: 768px)": {
+    left: "5%",
+  },
   transform: "translateY(-50%)",
-  fontSize: "60px",
+  fontSize: "3.75rem",
 });
 
 export const boldText = {

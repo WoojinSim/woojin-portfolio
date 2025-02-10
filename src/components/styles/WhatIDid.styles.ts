@@ -2,6 +2,9 @@ import { css } from "@emotion/react";
 
 export const mainContainer = css({
   padding: "100px 20% 100px",
+  "@media screen and (max-width: 768px)": {
+    padding: "100px 5% 100px",
+  },
 });
 
 export const mainTitleLabel = css({
@@ -15,6 +18,9 @@ export const mainGridContainer = css({
   display: "grid",
   gridTemplateColumns: "repeat(auto-fill, minmax(400px, 1fr))",
   gap: "20px",
+  "@media screen and (max-width: 768px)": {
+    gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+  },
 });
 
 export const itemTitleLabel = css({
@@ -27,10 +33,12 @@ export const itemTitleLabel = css({
 });
 
 export const itemContainer = css({
+  position: "relative",
   display: "inline-block",
   borderRadius: "16px",
   border: "1px solid rgba(0, 0, 0, 0.06)",
   boxShadow: "0 1px 3px rgba(0, 0, 0, 0.1)",
+  boxSizing: "border-box",
   padding: "24px",
   overflow: "hidden",
   cursor: "pointer",
@@ -42,7 +50,24 @@ export const itemContainer = css({
     transform: "translateY(-8px)",
     boxShadow: "0 20px 40px rgba(0, 0, 0, 0.12)",
     background: "#fafafa",
+    "& .itemDetailButton": {
+      top: "10%",
+    },
   },
+});
+
+export const itemDetailButton = css({
+  position: "absolute",
+  top: "-10%",
+  right: "50%",
+  transform: "translateX(50%)",
+  background: "rgba(0, 0, 0, 0.5)",
+  color: "#FFF",
+  padding: "5px 10px",
+  borderRadius: "5px",
+  fontFamily: "NanumSquareNeoBold",
+  fontSize: "0.875rem",
+  transition: "all 0.3s ease",
 });
 
 export const itemSubtitleContainer = css({
@@ -75,8 +100,19 @@ export const itemDescriptionTitleLabel = css({
   lineHeight: "1.4",
 });
 
+export const itemDescriptionSubTitleLabel = css({
+  display: "block",
+  marginBottom: "8px",
+  fontFamily: "NanumSquareNeo",
+  fontSize: "0.870rem",
+  color: "#444444",
+  letterSpacing: "-0.01em",
+  lineHeight: "1.4",
+});
+
 export const itemDescriptionList = css({
-  margin: "0",
+  marginTop: "0",
+  marginBottom: "8px",
   paddingLeft: "20px",
   fontFamily: "NanumSquareNeo",
   fontSize: "0.870rem",
@@ -106,5 +142,3 @@ export const itemUsedLanguageContainer = css({
     color: "#666",
   },
 });
-
-export const itemUsedLanguageSpan = css({});
