@@ -5,6 +5,7 @@ import TypingText from "../components/TypingText";
 import WhatIDid from "../components/WhatIDid";
 import AboutMe from "../components/AboutMe";
 import Skills from "../components/Skills";
+import Footer from "../components/Footer";
 import { wrap, headContainer, headLabelContainer, boldText, pointedColor } from "./styles/Home.styles";
 
 const Home: React.FC = () => {
@@ -31,6 +32,7 @@ const Home: React.FC = () => {
       <AboutMe />
       <Skills />
       <WhatIDid />
+      <Footer />
     </div>
   );
 };
