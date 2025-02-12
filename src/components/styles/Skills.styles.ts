@@ -167,10 +167,10 @@ export const skillsList = css({
       backgroundColor: "#06B6D4",
       boxShadow: "0 4px 8px rgba(6,182,212,0.3)",
     },
-    "&[data-skill='firebase']:hover": {
-      backgroundColor: "#FFCA28",
-      color: "black",
-      boxShadow: "0 4px 8px rgba(255,202,40,0.3)",
+    "&[data-skill='redux']:hover": {
+      backgroundColor: "#764ABC",
+      color: "white",
+      boxShadow: "0 4px 8px rgba(118,74,188,0.3)",
     },
     "&[data-skill='next']:hover": {
       backgroundColor: "#000000",

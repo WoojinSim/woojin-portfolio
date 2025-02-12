@@ -12,7 +12,7 @@ import {
   SiDotnet,
   SiLua,
   SiNextdotjs,
-  SiFirebase,
+  SiRedux,
   SiDjango,
   SiFlask,
   SiTailwindcss,
@@ -113,9 +113,9 @@ const Skills: React.FC = () => {
               <SiTailwindcss css={skillIcon} />
               Tailwind
             </li>
-            <li data-skill="firebase">
-              <SiFirebase css={skillIcon} />
-              Firebase
+            <li data-skill="redux">
+              <SiRedux css={skillIcon} />
+              Redux
             </li>
             <li data-skill="next">
               <SiNextdotjs css={skillIcon} />
