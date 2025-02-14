@@ -103,37 +103,77 @@ export const modalDescriptionContainer = css({
   boxSizing: "border-box",
   borderTop: "1px solid #00000020",
   height: "100%",
-  span: {
+  "&::-webkit-scrollbar": {
+    display: "none",
+  },
+});
+
+export const modalDescriptionSection = css({
+  marginTop: "50px",
+  "&:first-child": {
+    marginTop: "10px",
+  },
+  p: {
     display: "block",
-    marginLeft: "10px",
-    marginBottom: "16px",
+    padding: "0 10px",
+    margin: "16px 0",
     lineHeight: "1.7",
     color: "#333",
     wordBreak: "keep-all",
     strong: {
       fontWeight: "bold",
     },
-  },
-  "&::-webkit-scrollbar": {
-    display: "none",
+    "@media (max-width: 768px)": {
+      padding: "0",
+    },
   },
   "span.title": {
     display: "inline-block",
     marginLeft: "0",
+    marginBottom: "10px",
     fontWeight: "bold",
     fontSize: "1.3rem",
-    marginBottom: "16px",
+    lineHeight: "1.7",
     background: "linear-gradient(45deg, #1e40af, #3b82f6)",
     padding: "0 25px",
     borderRadius: "50px",
     color: "#fff",
     transition: "all 0.3s ease",
-    "&:not(:first-of-type)": {
-      marginTop: "40px",
-    },
     "&:hover": {
       transform: "translateY(-5px) rotate(-4deg)",
       boxShadow: "0 5px 10px rgba(0, 0, 0, 0.1), 0 0 10px rgba(59, 130, 246, 0.5)",
+    },
+  },
+  "span.subtitle": {
+    display: "block",
+    padding: "0 10px",
+    lineHeight: "1.7",
+    color: "#333",
+    wordBreak: "keep-all",
+    fontWeight: "bold",
+    margin: "20px 0 0",
+    "@media (max-width: 768px)": {
+      padding: "0",
+    },
+  },
+  ul: {
+    margin: "0",
+    lineHeight: "1.7",
+    color: "#333",
+    paddingInlineStart: "30px",
+    "@media (max-width: 768px)": {
+      paddingInlineStart: "0",
+    },
+    "&.nodot": {
+      listStyleType: "none",
+      paddingInlineStart: "20px",
+      "@media (max-width: 768px)": {
+        paddingInlineStart: "0",
+      },
+    },
+    li: {
+      lineHeight: "1.7",
+      margin: "10px 0",
     },
   },
 });

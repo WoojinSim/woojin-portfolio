@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { FaGithub } from "react-icons/fa";
 import {
   mainContainer,
@@ -15,8 +15,6 @@ import {
   profileItemLabel,
   profileItemContent,
 } from "./styles/AboutMe.styles";
-
-// TODO: 소갯말 이래에 간단한 자기소개 추가 (더보기 클릭해서 세부정보 확인 기능)
 
 const AboutMe: React.FC = () => {
   return (
