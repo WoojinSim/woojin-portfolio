@@ -2,7 +2,7 @@
 import React from "react";
 import { mainContainer, commonLabel } from "./styles/Footer.styles";
 
-const Skills: React.FC = () => {
+const Footer: React.FC = () => {
   return (
     <div css={mainContainer}>
       <span css={commonLabel}>© 2024. Woojin Sim. All rights reserved.</span>
@@ -13,4 +13,4 @@ const Skills: React.FC = () => {
   );
 };
 
-export default Skills;
+export default Footer;
