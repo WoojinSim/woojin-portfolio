@@ -14,7 +14,6 @@ import {
   SiNextdotjs,
   SiRedux,
   SiDjango,
-  SiFlask,
   SiTailwindcss,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
@@ -35,7 +34,6 @@ const Skills: React.FC = () => {
   return (
     <div css={mainContainer}>
       <span css={itemTitleLabel}>할 수 있는 것</span>
-
       <div css={categoryContainer}>
         <span css={categoryTitle}>언어</span>
         <div css={categorySubContainer}>
@@ -124,10 +122,6 @@ const Skills: React.FC = () => {
             <li data-skill="django">
               <SiDjango css={skillIcon} />
               DJango
-            </li>
-            <li data-skill="flask">
-              <SiFlask css={skillIcon} />
-              Flask
             </li>
             <li data-skill="dotnet">
               <SiDotnet css={skillIcon} />

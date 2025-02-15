@@ -7,10 +7,16 @@ export const mainContainer = css({
   },
 });
 
+export const mainTitleContainer = css({
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  marginBottom: "50px",
+});
+
 export const mainTitleLabel = css({
   fontFamily: "NanumSquareNeoExtraBold",
   fontSize: "2.5rem",
-  marginBottom: "50px",
   display: "block",
 });
 
@@ -140,5 +146,18 @@ export const itemUsedLanguageContainer = css({
   background: "rgba(0, 0, 0, 0.02)",
   svg: {
     color: "#666",
+  },
+});
+
+export const sortButton = css({
+  padding: "5px 8px",
+  borderRadius: "5px",
+  fontFamily: "NanumSquareNeo",
+  fontSize: "0.875rem",
+  transition: "all 0.3s ease",
+  cursor: "pointer",
+  color: "#D0D0D0",
+  "&.active": {
+    color: "#3B82F6",
   },
 });

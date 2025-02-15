@@ -14,6 +14,8 @@ import {
   itemUsedLanguageContainer,
   itemDetailButton,
   itemDescriptionSubTitleLabel,
+  mainTitleContainer,
+  sortButton,
 } from "./styles/WhatIDid.styles";
 
 import AlarmInfo from "./WhatIDid.Modal/Alarm.info";
@@ -22,11 +24,13 @@ import MedicineAlarmInfo from "./WhatIDid.Modal/MedicineAlarm.info";
 import PortfolioInfo from "./WhatIDid.Modal/Portfolio.info";
 
 type WhatIDidWork = "Alarm" | "JourneyHub" | "MedicineAlarm" | "Portfolio";
+type SortType = "ASC" | "DESC";
 
 // TODO: 프로젝트 제목 강조, 카드 순서 역순, 상세페이지 추가, 목적 하이라이팅
 
 const WhatIDid: React.FC = () => {
   const [activeModal, setActiveModal] = useState<WhatIDidWork | null>(null);
+  const [sortType, setSortType] = useState<SortType>("ASC");
 
   // 모달 열기
   const handleModalOpen = (modal: WhatIDidWork) => {
@@ -37,6 +41,10 @@ const WhatIDid: React.FC = () => {
   // 모달 닫기
   const handleModalClose = () => {
     setActiveModal(null);
+  };
+
+  const handleSortTypeChange = (type: SortType) => {
+    setSortType(type);
   };
 
   // 스크롤 제어
@@ -62,7 +70,28 @@ const WhatIDid: React.FC = () => {
 
   return (
     <div css={mainContainer}>
-      <span css={mainTitleLabel}>지금까지 해온 것</span>
+      <div css={mainTitleContainer}>
+        <span css={mainTitleLabel}>지금까지 해온 것</span>
+        {/* TODO: 카드 순서 역순 기능 추가 시 사용
+        <div>
+          <span
+            css={sortButton}
+            className={sortType === "ASC" ? "active" : ""}
+            onClick={() => handleSortTypeChange("ASC")}
+          >
+            오름차순
+          </span>
+          <span
+            css={sortButton}
+            className={sortType === "DESC" ? "active" : ""}
+            onClick={() => handleSortTypeChange("DESC")}
+          >
+            내림차순
+          </span>
+        </div>
+        */}
+      </div>
+
       <div css={mainGridContainer}>
         <div css={itemContainer} onClick={() => handleModalOpen("Alarm")}>
           <span className="itemDetailButton" css={itemDetailButton}>

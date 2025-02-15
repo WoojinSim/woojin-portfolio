@@ -130,7 +130,7 @@ export const modalDescriptionSection = css({
   "span.title": {
     display: "inline-block",
     marginLeft: "0",
-    marginBottom: "10px",
+    marginBottom: "0",
     fontWeight: "bold",
     fontSize: "1.3rem",
     lineHeight: "1.7",
