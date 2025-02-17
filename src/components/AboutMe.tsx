@@ -33,7 +33,7 @@ const AboutMe: React.FC = () => {
           <li css={profileItem}>
             <span css={profileItemLabel}>학력</span>
             <span css={profileItemContent}>국립공주대학교</span>
-            <span css={profileItemContent}>소프트웨어공학과</span>
+            <span css={profileItemContent}>소프트웨어공학과 학사</span>
           </li>
 
           <li css={profileItem}>
@@ -53,7 +53,7 @@ const AboutMe: React.FC = () => {
       <span css={itemTitleLabel}>저는,</span>
       <span css={titleLabel}>만드는 것이 그저 즐거운 사람입니다.</span>
       <span css={contentLabel}>
-        아주 사소한것들 이라도, 필요 없어 보이는 것들이라도 결과를 만들어내는 것이 막연히 좋았던 저는
+        아주 사소한 것들이라도, 필요 없어 보이는 것들이라도 결과를 만들어내는 것이 막연히 좋았던 저는
       </span>
       <span css={contentLabel}>
         오늘날, 코딩이라는 수단으로 아이디어를 실현하고, 만들어진 결과물들이 불러오는 변화들이 너무나도 소중해졌습니다.

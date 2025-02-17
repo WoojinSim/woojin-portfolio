@@ -6,6 +6,7 @@ import WhatIDid from "../components/WhatIDid";
 import AboutMe from "../components/AboutMe";
 import Skills from "../components/Skills";
 import Footer from "../components/Footer";
+import PlayGround from "../components/PlayGround";
 import { wrap, headContainer, headLabelContainer, boldText, pointedColor } from "./styles/Home.styles";
 
 const Home: React.FC = () => {
@@ -18,6 +19,7 @@ const Home: React.FC = () => {
   return (
     <div css={wrap}>
       <div css={headContainer}>
+        {/*<PlayGround />*/}
         <div css={headLabelContainer}>
           <div>
             <span>안녕하세요, </span>
