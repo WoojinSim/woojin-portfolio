@@ -80,7 +80,7 @@ const MedicineAlarmInfo: React.FC<ModalInfoProps> = ({ handleModalClose }) => {
             </ul>
           </div>
           <div css={modalDescriptionSection}>
-            <span className="title">과정을</span>
+            <span className="title">과정</span>
 
             <span className="subtitle">피드백 수렴 및 반영</span>
             <ul className="nodot">
