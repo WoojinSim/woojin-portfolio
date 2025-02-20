@@ -35,7 +35,7 @@ const JourneyHubInfo: React.FC<ModalInfoProps> = ({ handleModalClose }) => {
         </span>
         <div css={modalSubtitleContainer}>
           <span>2023.09</span>
-          <span>1인 프로젝트</span>
+          <span>3인 프로젝트</span>
         </div>
         <div css={modalDescriptionContainer}>
           <div css={modalDescriptionSection}>
