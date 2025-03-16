@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import React from "react";
+import React, { useRef } from "react";
 import {
   SiTypescript,
   SiJavascript,
@@ -27,14 +27,20 @@ import {
   categorySubContainer,
   skillIcon,
 } from "./styles/Skills.styles";
+import { scrollFadeInLeft, scrollFadeInRight } from "./styles/global.styles";
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 // TODO: 잘 알고있는 언어 들을 단계별로 나누어 표시
 
 const Skills: React.FC = () => {
+  const addScrollAnimationRef = useScrollAnimation();
+
   return (
     <div css={mainContainer}>
-      <span css={itemTitleLabel}>할 수 있는 것</span>
-      <div css={categoryContainer}>
+      <span css={[itemTitleLabel, scrollFadeInRight]} ref={addScrollAnimationRef}>
+        할 수 있는 것
+      </span>
+      <div css={[categoryContainer, scrollFadeInLeft]} ref={addScrollAnimationRef}>
         <span css={categoryTitle}>언어</span>
         <div css={categorySubContainer}>
           <span css={categorySubTitle}>주로 사용</span>
@@ -80,7 +86,7 @@ const Skills: React.FC = () => {
         </div>
       </div>
 
-      <div css={categoryContainer}>
+      <div css={[categoryContainer, scrollFadeInLeft]} ref={addScrollAnimationRef}>
         <span css={categoryTitle}>라이브러리</span>
 
         <div css={categorySubContainer}>
@@ -98,6 +104,10 @@ const Skills: React.FC = () => {
               <span css={skillIcon}>🎨</span>
               Emotion
             </li>
+            <li data-skill="tailwind">
+              <SiTailwindcss css={skillIcon} />
+              Tailwind
+            </li>
             <li data-skill="express">
               <SiExpress css={skillIcon} />
               Express
@@ -107,10 +117,6 @@ const Skills: React.FC = () => {
         <div css={categorySubContainer}>
           <span css={categorySubTitle}>사용 경험</span>
           <ul css={skillsList}>
-            <li data-skill="tailwind">
-              <SiTailwindcss css={skillIcon} />
-              Tailwind
-            </li>
             <li data-skill="redux">
               <SiRedux css={skillIcon} />
               Redux

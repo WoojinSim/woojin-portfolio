@@ -15,22 +15,24 @@ import {
   itemDetailButton,
   itemDescriptionSubTitleLabel,
   mainTitleContainer,
-  sortButton,
+  // sortButton,
 } from "./styles/WhatIDid.styles";
+import { scrollFadeInUp, scrollFadeInRight } from "./styles/global.styles";
 
 import AlarmInfo from "./WhatIDid.Modal/Alarm.info";
 import JourneyHubInfo from "./WhatIDid.Modal/JourneyHub.info";
 import MedicineAlarmInfo from "./WhatIDid.Modal/MedicineAlarm.info";
 import PortfolioInfo from "./WhatIDid.Modal/Portfolio.info";
-
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 type WhatIDidWork = "Alarm" | "JourneyHub" | "MedicineAlarm" | "Portfolio";
 type SortType = "ASC" | "DESC";
 
 // TODO: 프로젝트 제목 강조, 카드 순서 역순, 상세페이지 추가, 목적 하이라이팅
 
 const WhatIDid: React.FC = () => {
+  const addScrollAnimationRef = useScrollAnimation();
   const [activeModal, setActiveModal] = useState<WhatIDidWork | null>(null);
-  const [sortType, setSortType] = useState<SortType>("ASC");
+  // const [sortType, setSortType] = useState<SortType>("ASC");
 
   // 모달 열기
   const handleModalOpen = (modal: WhatIDidWork) => {
@@ -43,9 +45,11 @@ const WhatIDid: React.FC = () => {
     setActiveModal(null);
   };
 
+  /*
   const handleSortTypeChange = (type: SortType) => {
     setSortType(type);
   };
+  */
 
   // 스크롤 제어
   useEffect(() => {
@@ -70,7 +74,7 @@ const WhatIDid: React.FC = () => {
 
   return (
     <div css={mainContainer}>
-      <div css={mainTitleContainer}>
+      <div css={[mainTitleContainer, scrollFadeInRight]} ref={addScrollAnimationRef}>
         <span css={mainTitleLabel}>지금까지 해온 것</span>
         {/* TODO: 카드 순서 역순 기능 추가 시 사용
         <div>
@@ -92,7 +96,7 @@ const WhatIDid: React.FC = () => {
         */}
       </div>
 
-      <div css={mainGridContainer}>
+      <div css={[mainGridContainer, scrollFadeInUp]} ref={addScrollAnimationRef}>
         <div css={itemContainer} onClick={() => handleModalOpen("Alarm")}>
           <span className="itemDetailButton" css={itemDetailButton}>
             클릭하여 자세히 보기

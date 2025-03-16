@@ -1,6 +1,7 @@
 import { css } from "@emotion/react";
 
 export const mainContainer = css({
+  backgroundColor: "white",
   padding: "100px 20% 100px",
   "@media screen and (max-width: 768px)": {
     padding: "100px 5% 100px",
@@ -75,26 +76,30 @@ export const profileContainer = css({
   display: "grid",
   gridTemplateColumns: "auto 1fr",
   alignItems: "center",
-  gap: "2rem",
+  gap: "5rem",
   "@media screen and (max-width: 768px)": {
     gridTemplateColumns: "1fr",
   },
 });
 
-export const profileImage = css({
-  width: "140px",
-  height: "140px",
+export const profileImageWrapper = css({
+  width: "160px",
+  height: "160px",
   borderRadius: "50%",
-  backgroundColor: "#F0F0F0",
-  color: "#999999",
+  overflow: "hidden",
   display: "flex",
-  alignItems: "center",
+  alignItems: "start",
   justifyContent: "center",
+  boxShadow: "0 0 5px 1px rgba(0, 0, 0, 0.1)",
   "@media screen and (max-width: 768px)": {
-    width: "160px",
-    height: "160px",
     margin: "0 auto",
   },
+});
+
+export const profileImage = css({
+  height: "auto",
+  width: "100%",
+  objectFit: "cover",
 });
 
 export const profileItemWrapper = css({

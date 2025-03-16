@@ -2,6 +2,7 @@ import { css } from "@emotion/react";
 
 export const mainContainer = css({
   padding: "100px 20% 100px",
+  backgroundColor: "white",
   "@media screen and (max-width: 768px)": {
     padding: "100px 5% 100px",
   },
