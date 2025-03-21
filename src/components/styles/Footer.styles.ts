@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 
 export const mainContainer = css({
-  padding: "2.5rem 0",
+  padding: "2rem 0",
   backgroundColor: "#F1F2F6",
   display: "flex",
   flexDirection: "column",

@@ -16,6 +16,7 @@ import {
   careerItemProjectTitle,
   careerItemProjectTitleWrapper,
   careerItemProjectDescription,
+  careerItemProjectWrapper,
 } from "./styles/Career.styles";
 import { scrollFadeInLeft, scrollFadeInRight } from "./styles/global.styles";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
@@ -58,14 +59,16 @@ const Career: React.FC = () => {
             </div>
 
             {/* 진행한 사내 프로젝트 */}
-            <div css={careerItemProjectContainer}>
-              <div css={careerItemProjectTitleWrapper}>
-                <span css={careerItemProjectTitle}>Trinity Club 백오피스 웹사이트 개발</span>
-                <span css={careerItemProjectTitle} className="subTitle">
-                  2025.1Q ~ (진행중)
-                </span>
+            <div css={careerItemProjectWrapper}>
+              <div css={careerItemProjectContainer}>
+                <div css={careerItemProjectTitleWrapper}>
+                  <span css={careerItemProjectTitle}>Trinity Club 백오피스 웹사이트 개발</span>
+                  <span css={careerItemProjectTitle} className="subTitle">
+                    2025.1Q ~ (진행중)
+                  </span>
+                </div>
+                <span css={careerItemProjectDescription}>React 기반 백오피스 웹사이트의 프론트엔드 개발을 진행</span>
               </div>
-              <span css={careerItemProjectDescription}>React 기반 백오피스 웹사이트의 프론트엔드 개발을 진행</span>
             </div>
           </div>
         </div>

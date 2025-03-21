@@ -42,8 +42,10 @@ export const careerItemImageWrapper = css({
   borderRadius: "50%",
   boxShadow: "0 0 4px 1px rgba(0, 0, 0, 0.3)",
   marginRight: "4rem",
+  marginTop: "1rem",
   overflow: "hidden",
   "@media screen and (max-width: 768px)": {
+    marginTop: "0",
     marginRight: "0",
     marginBottom: "2rem",
     width: "10rem",
@@ -64,10 +66,13 @@ export const careerItemLabelContainer = css({
   flexDirection: "column",
   justifyContent: "start",
   alignItems: "start",
-  paddingBottom: "6rem",
+  paddingTop: "1rem",
+  paddingBottom: "5rem",
   paddingLeft: "4rem",
   borderLeft: "1px solid rgba(0, 0, 0, 0.2)",
+  gap: "0.8rem",
   "@media screen and (max-width: 768px)": {
+    gap: "1rem",
     paddingBottom: "2rem",
     paddingLeft: "0",
     borderLeft: "none",
@@ -81,11 +86,10 @@ export const careerItemTitleWrapper = css({
   flexWrap: "wrap",
   justifyContent: "space-between",
   alignItems: "center",
-  marginBottom: "0.25rem",
   "@media screen and (max-width: 768px)": {
+    marginBottom: "0.25rem",
     flexDirection: "column",
     alignItems: "center",
-    marginBottom: "1rem",
   },
 });
 
@@ -99,6 +103,9 @@ export const careerItemTitleLabel = css({
     fontFamily: "NanumSquareNeo",
     color: "rgba(0, 0, 0, 0.6)",
     fontSize: "0.85rem",
+    "@media screen and (max-width: 768px)": {
+      marginTop: "0.2rem",
+    },
   },
 });
 
@@ -106,33 +113,42 @@ export const careerItemDescriptionLabel = css({
   fontFamily: "NanumSquareNeo",
   color: "#454545",
   fontSize: "0.85rem",
-  marginBottom: "1rem",
   "@media screen and (max-width: 768px)": {
-    marginBottom: "1rem",
     textAlign: "center",
   },
 });
 
 export const careerItemPositionContainer = css({
   display: "flex",
+  flexWrap: "wrap",
   flexDirection: "row",
   justifyContent: "start",
   alignItems: "center",
   width: "100%",
-  marginBottom: "1rem",
+  gap: "0.25rem",
   "& > span": {
-    fontFamily: "NanumSquareNeo",
+    cursor: "default",
+    fontFamily: "NanumSquareNeoBold",
     color: "white",
+    lineHeight: "1.5",
     backgroundColor: "#454545",
-    padding: "0.25rem 1rem",
+    padding: "0.2rem 1rem",
     borderRadius: "4px",
     fontSize: "0.95rem",
-    marginRight: "1rem",
   },
   "@media screen and (max-width: 768px)": {
     justifyContent: "center",
     alignItems: "start",
   },
+});
+
+export const careerItemProjectWrapper = css({
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "start",
+  alignItems: "start",
+  width: "100%",
+  gap: "0.5rem",
 });
 
 export const careerItemProjectContainer = css({
@@ -143,7 +159,6 @@ export const careerItemProjectContainer = css({
   justifyContent: "start",
   alignItems: "start",
   width: "100%",
-  marginBottom: "1rem",
   padding: "0.8rem",
   border: "1px solid rgba(0, 0, 0, 0.1)",
   borderRadius: "4px",
