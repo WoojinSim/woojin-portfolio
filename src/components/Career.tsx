@@ -17,6 +17,7 @@ import {
   careerItemProjectTitleWrapper,
   careerItemProjectDescription,
   careerItemProjectWrapper,
+  careerItemProjectDescriptionList,
 } from "./styles/Career.styles";
 import { scrollFadeInLeft, scrollFadeInRight } from "./styles/global.styles";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
@@ -62,12 +63,24 @@ const Career: React.FC = () => {
             <div css={careerItemProjectWrapper}>
               <div css={careerItemProjectContainer}>
                 <div css={careerItemProjectTitleWrapper}>
-                  <span css={careerItemProjectTitle}>Trinity Club 백오피스 웹사이트 개발</span>
+                  <span css={careerItemProjectTitle}>Trinity Club 백오피스 개발</span>
                   <span css={careerItemProjectTitle} className="subTitle">
                     2025.1Q ~ (진행중)
                   </span>
                 </div>
-                <span css={careerItemProjectDescription}>React 기반 백오피스 웹사이트의 프론트엔드 개발을 진행</span>
+                <span css={careerItemProjectDescription}>웹사이트의 프론트엔드 개발 진행</span>
+              </div>
+              <div css={careerItemProjectContainer}>
+                <div css={careerItemProjectTitleWrapper}>
+                  <span css={careerItemProjectTitle}>Orbrium 개발</span>
+                  <span css={careerItemProjectTitle} className="subTitle">
+                    2025.1Q ~ (진행중)
+                  </span>
+                </div>
+                <span css={careerItemProjectDescription}>웹사이트의 프론트엔드 개발 진행</span>
+                <ul css={careerItemProjectDescriptionList}>
+                  <li>동적 폼 내 사용자 지정 값, 이벤트 추적, 외부 값 연동 기능 개발</li>
+                </ul>
               </div>
             </div>
           </div>

@@ -44,8 +44,8 @@ const Home: React.FC = () => {
       <div css={contentContainer}>
         <AboutMe />
         <Skills />
-        <WhatIDid />
         <Career />
+        <WhatIDid />
         <Footer />
       </div>
     </div>

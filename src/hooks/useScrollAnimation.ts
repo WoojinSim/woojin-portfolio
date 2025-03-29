@@ -18,7 +18,7 @@ export const useScrollAnimation = (threshold: number = 0.8) => {
           }
         });
       },
-      { threshold: 0.1 }
+      { rootMargin: "-150px" }
     );
 
     elementRefs.current.forEach((el) => {
