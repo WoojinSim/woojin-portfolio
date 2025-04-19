@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/woojin-portfolio/static/js/main.455adb96.js",
+    "main.js": "/woojin-portfolio/static/js/main.f9516ff7.js",
     "static/media/profile_image.jpg": "/woojin-portfolio/static/media/profile_image.a7b91017323bce47b0ba.jpg",
     "static/media/Flowww.png": "/woojin-portfolio/static/media/Flowww.e13b1deaa378e842feab.png",
     "index.html": "/woojin-portfolio/index.html",
-    "main.455adb96.js.map": "/woojin-portfolio/static/js/main.455adb96.js.map"
+    "main.f9516ff7.js.map": "/woojin-portfolio/static/js/main.f9516ff7.js.map"
   },
   "entrypoints": [
-    "static/js/main.455adb96.js"
+    "static/js/main.f9516ff7.js"
   ]
 }
