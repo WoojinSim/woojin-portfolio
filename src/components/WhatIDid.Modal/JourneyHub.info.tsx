@@ -2,16 +2,7 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
 
-import {
-  modalWrap,
-  modalContainer,
-  modalCloseButton,
-  modalTitleLabel,
-  modalSubtitleContainer,
-  modalDescriptionContainer,
-  modalGithubBtn,
-  modalDescriptionSection,
-} from "../styles/Modal.styles";
+import * as style from "../styles/Modal.styles";
 
 interface ModalInfoProps {
   handleModalClose: () => void;
@@ -19,26 +10,26 @@ interface ModalInfoProps {
 
 const JourneyHubInfo: React.FC<ModalInfoProps> = ({ handleModalClose }) => {
   return (
-    <div css={modalWrap} onClick={handleModalClose}>
-      <div css={modalContainer} onClick={(e) => e.stopPropagation()}>
-        <button onClick={handleModalClose} css={modalCloseButton} />
-        <span css={modalTitleLabel}>
+    <div css={style.modalWrap} onClick={handleModalClose}>
+      <div css={style.modalContainer} onClick={(e) => e.stopPropagation()}>
+        <button onClick={handleModalClose} css={style.modalCloseButton} />
+        <span css={style.modalTitleLabel}>
           Journey Hub
           <a
             href="https://github.com/WoojinSim/travel-guider"
             target="_blank"
             rel="noopener noreferrer"
-            css={modalGithubBtn}
+            css={style.modalGithubBtn}
           >
             <FaGithub size={24} />
           </a>
         </span>
-        <div css={modalSubtitleContainer}>
+        <div css={style.modalSubtitleContainer}>
           <span>2023.09</span>
           <span>3인 프로젝트</span>
         </div>
-        <div css={modalDescriptionContainer}>
-          <div css={modalDescriptionSection}>
+        <div css={style.modalDescriptionContainer}>
+          <div css={style.modalDescriptionSection}>
             <span className="title">개요</span>
             <p>
               대학교 재학 중 과제로 진행된 프로젝트로, 여행 준비 과정에서 발생하는 비효율적인 정보 수집을 개선하기 위해
@@ -53,7 +44,7 @@ const JourneyHubInfo: React.FC<ModalInfoProps> = ({ handleModalClose }) => {
               확인할 수 있는 시스템을 개발하였습니다.
             </p>
           </div>
-          <div css={modalDescriptionSection}>
+          <div css={style.modalDescriptionSection}>
             <span className="title">기술 스택</span>
             <p>React, Express, TypeScript, Spring, Java</p>
             <ul>
@@ -74,7 +65,7 @@ const JourneyHubInfo: React.FC<ModalInfoProps> = ({ handleModalClose }) => {
               </li>
             </ul>
           </div>
-          <div css={modalDescriptionSection}>
+          <div css={style.modalDescriptionSection}>
             <span className="title">과정</span>
 
             <span className="subtitle">체계적인 소프트웨어 개발 방법론 부족</span>
@@ -118,7 +109,7 @@ const JourneyHubInfo: React.FC<ModalInfoProps> = ({ handleModalClose }) => {
             </ul>
           </div>
 
-          <div css={modalDescriptionSection}>
+          <div css={style.modalDescriptionSection}>
             <span className="title">결과</span>
 
             <span className="subtitle">명확한 개발 방향과 역할 분담</span>

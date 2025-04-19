@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import React, { useRef } from "react";
+import React from "react";
 import {
   SiTypescript,
   SiJavascript,
@@ -17,16 +17,7 @@ import {
   SiTailwindcss,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
-import {
-  mainContainer,
-  itemTitleLabel,
-  categoryContainer,
-  categoryTitle,
-  categorySubTitle,
-  skillsList,
-  categorySubContainer,
-  skillIcon,
-} from "./styles/Skills.styles";
+import * as style from "./styles/Skills.styles";
 import { scrollFadeInLeft, scrollFadeInRight } from "./styles/global.styles";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
@@ -36,101 +27,101 @@ const Skills: React.FC = () => {
   const addScrollAnimationRef = useScrollAnimation();
 
   return (
-    <div css={mainContainer}>
-      <span css={[itemTitleLabel, scrollFadeInRight]} ref={addScrollAnimationRef}>
+    <div css={style.mainContainer}>
+      <span css={[style.itemTitleLabel, scrollFadeInRight]} ref={addScrollAnimationRef}>
         할 수 있는 것
       </span>
-      <div css={[categoryContainer, scrollFadeInLeft]} ref={addScrollAnimationRef}>
-        <span css={categoryTitle}>언어</span>
-        <div css={categorySubContainer}>
-          <span css={categorySubTitle}>주로 사용</span>
-          <ul css={skillsList}>
+      <div css={[style.categoryContainer, scrollFadeInLeft]} ref={addScrollAnimationRef}>
+        <span css={style.categoryTitle}>언어</span>
+        <div css={style.categorySubContainer}>
+          <span css={style.categorySubTitle}>주로 사용</span>
+          <ul css={style.skillsList}>
             <li data-skill="typescript">
-              <SiTypescript css={skillIcon} />
+              <SiTypescript css={style.skillIcon} />
               TypeScript
             </li>
             <li data-skill="javascript">
-              <SiJavascript css={skillIcon} />
+              <SiJavascript css={style.skillIcon} />
               JavaScript
             </li>
             <li data-skill="python">
-              <SiPython css={skillIcon} />
+              <SiPython css={style.skillIcon} />
               Python
             </li>
           </ul>
         </div>
-        <div css={categorySubContainer}>
-          <span css={categorySubTitle}>사용 경험</span>
-          <ul css={skillsList}>
+        <div css={style.categorySubContainer}>
+          <span css={style.categorySubTitle}>사용 경험</span>
+          <ul css={style.skillsList}>
             <li data-skill="java">
-              <FaJava css={skillIcon} />
+              <FaJava css={style.skillIcon} />
               Java
             </li>
             <li data-skill="cplusplus">
-              <SiCplusplus css={skillIcon} />
+              <SiCplusplus css={style.skillIcon} />
               C++
             </li>
             <li data-skill="csharp">
-              <SiCsharp css={skillIcon} />
+              <SiCsharp css={style.skillIcon} />
               C#
             </li>
             <li data-skill="asp">🖥️ ASP Classic</li>
             <li data-skill="r">
-              <SiR css={skillIcon} />R
+              <SiR css={style.skillIcon} />R
             </li>
             <li data-skill="lua">
-              <SiLua css={skillIcon} />
+              <SiLua css={style.skillIcon} />
               Lua Script
             </li>
           </ul>
         </div>
       </div>
 
-      <div css={[categoryContainer, scrollFadeInLeft]} ref={addScrollAnimationRef}>
-        <span css={categoryTitle}>라이브러리</span>
+      <div css={[style.categoryContainer, scrollFadeInLeft]} ref={addScrollAnimationRef}>
+        <span css={style.categoryTitle}>라이브러리</span>
 
-        <div css={categorySubContainer}>
-          <span css={categorySubTitle}>주로 사용</span>
-          <ul css={skillsList}>
+        <div css={style.categorySubContainer}>
+          <span css={style.categorySubTitle}>주로 사용</span>
+          <ul css={style.skillsList}>
             <li data-skill="react">
-              <SiReact css={skillIcon} />
+              <SiReact css={style.skillIcon} />
               React
             </li>
             <li data-skill="reactnative">
-              <SiReact css={skillIcon} />
+              <SiReact css={style.skillIcon} />
               React Native
             </li>
             <li data-skill="emotion">
-              <span css={skillIcon}>🎨</span>
+              <span css={style.skillIcon}>🎨</span>
               Emotion
             </li>
             <li data-skill="tailwind">
-              <SiTailwindcss css={skillIcon} />
+              <SiTailwindcss css={style.skillIcon} />
               Tailwind
             </li>
             <li data-skill="express">
-              <SiExpress css={skillIcon} />
+              <SiExpress css={style.skillIcon} />
               Express
             </li>
           </ul>
         </div>
-        <div css={categorySubContainer}>
-          <span css={categorySubTitle}>사용 경험</span>
-          <ul css={skillsList}>
+        <div css={style.categorySubContainer}>
+          <span css={style.categorySubTitle}>사용 경험</span>
+          <ul css={style.skillsList}>
             <li data-skill="redux">
-              <SiRedux css={skillIcon} />
+              <SiRedux css={style.skillIcon} />
               Redux
             </li>
             <li data-skill="next">
-              <SiNextdotjs css={skillIcon} />
+              <SiNextdotjs css={style.skillIcon} />
               NEXT
             </li>
             <li data-skill="django">
-              <SiDjango css={skillIcon} />
+              <SiDjango css={style.skillIcon} />
               DJango
             </li>
             <li data-skill="dotnet">
-              <SiDotnet css={skillIcon} />
+              <SiDotnet css={style.skillIcon} />
               .NET
             </li>
           </ul>

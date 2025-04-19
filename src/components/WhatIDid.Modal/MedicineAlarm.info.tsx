@@ -2,16 +2,7 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
 
-import {
-  modalWrap,
-  modalContainer,
-  modalCloseButton,
-  modalTitleLabel,
-  modalSubtitleContainer,
-  modalDescriptionContainer,
-  modalGithubBtn,
-  modalDescriptionSection,
-} from "../styles/Modal.styles";
+import * as style from "../styles/Modal.styles";
 
 interface ModalInfoProps {
   handleModalClose: () => void;
@@ -19,26 +10,26 @@ interface ModalInfoProps {
 
 const MedicineAlarmInfo: React.FC<ModalInfoProps> = ({ handleModalClose }) => {
   return (
-    <div css={modalWrap} onClick={handleModalClose}>
-      <div css={modalContainer} onClick={(e) => e.stopPropagation()}>
-        <button onClick={handleModalClose} css={modalCloseButton} />
-        <span css={modalTitleLabel}>
+    <div css={style.modalWrap} onClick={handleModalClose}>
+      <div css={style.modalContainer} onClick={(e) => e.stopPropagation()}>
+        <button onClick={handleModalClose} css={style.modalCloseButton} />
+        <span css={style.modalTitleLabel}>
           약藥속
           <a
             href="https://github.com/WoojinSim/medicine-alarm"
             target="_blank"
             rel="noopener noreferrer"
-            css={modalGithubBtn}
+            css={style.modalGithubBtn}
           >
             <FaGithub size={24} />
           </a>
         </span>
-        <div css={modalSubtitleContainer}>
+        <div css={style.modalSubtitleContainer}>
           <span>2024.04</span>
           <span>3인 프로젝트</span>
         </div>
-        <div css={modalDescriptionContainer}>
-          <div css={modalDescriptionSection}>
+        <div css={style.modalDescriptionContainer}>
+          <div css={style.modalDescriptionSection}>
             <span className="title">개요</span>
             <p>
               대학교 졸업 과제로 진행된 복약 지도 및 건강 관리 애플리케이션입니다. 노년층을 주요 대상으로 하여
@@ -54,7 +45,7 @@ const MedicineAlarmInfo: React.FC<ModalInfoProps> = ({ handleModalClose }) => {
               기능도 포함되어 있습니다.
             </p>
           </div>
-          <div css={modalDescriptionSection}>
+          <div css={style.modalDescriptionSection}>
             <span className="title">기술 스택</span>
             <p>React Native, Typescript, Expo, Spring, PyTorch, Gradle, Java, Python, MySQL</p>
             <ul>
@@ -79,7 +70,7 @@ const MedicineAlarmInfo: React.FC<ModalInfoProps> = ({ handleModalClose }) => {
               </li>
             </ul>
           </div>
-          <div css={modalDescriptionSection}>
+          <div css={style.modalDescriptionSection}>
             <span className="title">과정</span>
 
             <span className="subtitle">피드백 수렴 및 반영</span>
@@ -111,7 +102,7 @@ const MedicineAlarmInfo: React.FC<ModalInfoProps> = ({ handleModalClose }) => {
             </ul>
           </div>
 
-          <div css={modalDescriptionSection}>
+          <div css={style.modalDescriptionSection}>
             <span className="title">결과</span>
             <p>
               이번 프로젝트를 통해 피드백을 효과적으로 수용하고 반영하는 능력의 중요성을 깨달았습니다. 또한, 팀원 간의

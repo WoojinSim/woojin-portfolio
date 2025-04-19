@@ -1,15 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import React from "react";
 
-import {
-  modalWrap,
-  modalContainer,
-  modalCloseButton,
-  modalTitleLabel,
-  modalSubtitleContainer,
-  modalDescriptionContainer,
-  modalDescriptionSection,
-} from "../styles/Modal.styles";
+import * as style from "../styles/Modal.styles";
 
 interface AlarmInfoProps {
   handleModalClose: () => void;
@@ -17,16 +9,16 @@ interface AlarmInfoProps {
 
 const AlarmInfo: React.FC<AlarmInfoProps> = ({ handleModalClose }) => {
   return (
-    <div css={modalWrap} onClick={handleModalClose}>
-      <div css={modalContainer} onClick={(e) => e.stopPropagation()}>
-        <button onClick={handleModalClose} css={modalCloseButton} />
-        <span css={modalTitleLabel}>상황조치도우미</span>
-        <div css={modalSubtitleContainer}>
+    <div css={style.modalWrap} onClick={handleModalClose}>
+      <div css={style.modalContainer} onClick={(e) => e.stopPropagation()}>
+        <button onClick={handleModalClose} css={style.modalCloseButton} />
+        <span css={style.modalTitleLabel}>상황조치도우미</span>
+        <div css={style.modalSubtitleContainer}>
           <span>2022.06</span>
           <span>1인 프로젝트</span>
         </div>
-        <div css={modalDescriptionContainer}>
-          <div css={modalDescriptionSection}>
+        <div css={style.modalDescriptionContainer}>
+          <div css={style.modalDescriptionSection}>
             <span className="title">개요</span>
             <p>
               <strong>21사단 GOP 영상감시병</strong>으로 군복무 중 남방한계선 철책에 긴급상황이 발생했을 때 진행하는
@@ -43,7 +35,7 @@ const AlarmInfo: React.FC<AlarmInfoProps> = ({ handleModalClose }) => {
               영상감시병은 오로지 전방향 특이사항 감시에만 집중할 수 있게 도와줍니다.
             </p>
           </div>
-          <div css={modalDescriptionSection}>
+          <div css={style.modalDescriptionSection}>
             <span className="title">기술 스택</span>
             <p>ASP Classic, SQL, HTML, CSS, JavaScript</p>
             <ul>
@@ -64,7 +56,7 @@ const AlarmInfo: React.FC<AlarmInfoProps> = ({ handleModalClose }) => {
               </li>
             </ul>
           </div>
-          <div css={modalDescriptionSection}>
+          <div css={style.modalDescriptionSection}>
             <span className="title">과정</span>
 
             <span className="subtitle">폐쇄망 환경의 한계</span>
@@ -108,7 +100,7 @@ const AlarmInfo: React.FC<AlarmInfoProps> = ({ handleModalClose }) => {
               </li>
             </ul>
           </div>
-          <div css={modalDescriptionSection}>
+          <div css={style.modalDescriptionSection}>
             <span className="title">결과</span>
             <p>
               시스템 개발 후 중대장에게 직접 보고 및 정식 사용 승인을 요청, 이후 군단까지 보고되어 공식 사용 승인을
