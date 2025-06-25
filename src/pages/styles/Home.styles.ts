@@ -40,13 +40,13 @@ export const headLabelContainer = css({
 
 export const headLabelInnerContainer = css({
   display: "flex",
-  flexWrap: "wrap",
+  flexWrap: "nowrap",
   flexDirection: "row",
   justifyContent: "start",
-  alignItems: "start",
+  alignItems: "center",
+  gap: "0.6rem",
   "@media screen and (max-width: 768px)": {
     flexDirection: "column",
-    gap: "0.4rem",
   },
 });
 

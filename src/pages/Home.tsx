@@ -30,8 +30,11 @@ const Home: React.FC = () => {
       <div css={headContainer}>
         <div css={headLabelContainer}>
           <div css={headLabelInnerContainer}>
-            <span css={{ marginRight: "0.5rem" }}>안녕하세요,</span>
-            <TypingText setIsTypingComplete={handleIsTypingComplete} />
+            <span>안녕하세요,</span>
+            <TypingText
+              texts={["고민하는", "해결해 내는", "잠 못 드는", "긍정적인", "되짚어보는", "도전하는"]}
+              rotationInterval={3000}
+            />
             <span>개발자</span>
           </div>
           <span css={boldText.extra}>심우진</span>

@@ -1,59 +1,94 @@
 /** @jsxImportSource @emotion/react */
-import React, { useState, useEffect } from "react";
-import Hangul from "hangul-js";
+import React, { useState, useEffect, useMemo, useCallback, useRef } from "react";
 
-import { typingLabel, blink } from "./styles/TypingText.styles";
+import * as styles from "./styles/TypingText.styles";
+import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 
-interface valuePropsInterface {
-  setIsTypingComplete: (newState: boolean) => void;
+interface Props {
+  texts: string[];
+  staggerDuration?: number;
+  rotationInterval?: number;
+  loop?: boolean;
 }
+const TypingText = ({ texts, staggerDuration = 0.025, rotationInterval = 2500, loop = false }: Props) => {
+  const TRANSITION = { type: "spring" as const, damping: 30, stiffness: 400 };
+  const INITIAL = { y: "100%" };
+  const ANIMATE = { y: 0 };
+  const EXIT = { y: "-120%" };
 
-const TypingText: React.FC<valuePropsInterface> = ({ setIsTypingComplete }) => {
-  const [typingText, setTypingText] = useState<String>("");
-  const [currentTypingStep, setCurrentTypingStep] = useState<number>(0);
-  const [loopIndex, setLoopIndex] = useState<number>(0);
-  const [isDeleting, setIsDeleting] = useState<boolean>(false);
-  const [isComplete, setIsComplete] = useState<boolean>(false);
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
 
-  const pauseTime = 2000;
-  const speed = 100;
-  const typingTextList = ["호기심많은", "고민하는", "물어보는", "잠못자는", "긍정적인", "도전하는"];
+  const splitIntoCharacters = (text: string): string[] => {
+    if (typeof Intl !== "undefined" && Intl.Segmenter) {
+      const segmenter = new Intl.Segmenter("ko", { granularity: "grapheme" });
+      return Array.from(segmenter.segment(text), (segment) => segment.segment);
+    }
+    return Array.from(text);
+  };
+
+  const elements = useMemo(() => {
+    const currentText = texts[currentTextIndex];
+    const words = currentText.split(" ");
+    return words.map((word, i) => ({
+      characters: splitIntoCharacters(word),
+      needsSpace: i !== words.length - 1,
+    }));
+  }, [texts, currentTextIndex]);
+
+  const getStaggerDelay = useCallback(
+    (index: number) => {
+      return index * staggerDuration;
+    },
+    [staggerDuration]
+  );
+
+  const next = useCallback(() => {
+    const nextIndex = currentTextIndex === texts.length - 1 ? (loop ? 0 : currentTextIndex) : currentTextIndex + 1;
+    if (nextIndex !== currentTextIndex) {
+      setCurrentTextIndex(nextIndex);
+    }
+  }, [currentTextIndex, texts.length, loop]);
 
   useEffect(() => {
-    const handleTyping = () => {
-      const currentText = typingTextList[loopIndex]; // 현재 표출될 단어
-      if (!currentText) return;
-      const splitText = Hangul.disassemble(currentText); // 표출될 단어 자모음 분해
+    const intervalId = setInterval(next, rotationInterval);
+    return () => clearInterval(intervalId);
+  }, [next, rotationInterval]);
 
-      setCurrentTypingStep((prev) => prev + 1);
-      if (!isDeleting) {
-        setTypingText(Hangul.assemble(splitText.slice(0, currentTypingStep + 1)));
-        if (currentTypingStep + 1 >= splitText.length) {
-          // 모든 글자가 다 써졌을 때
-          setTimeout(() => setIsDeleting(true), pauseTime);
-        }
-      } else {
-        if (loopIndex + 1 >= typingTextList.length) {
-          setIsComplete(true);
-          setIsTypingComplete(true);
-          return;
-        } // 단어목록 끝에 도달하면 끝
-        if (typingText.length > 0) {
-          // 전부 지워질 때 까지 한글자씩 삭제
-          setTypingText(typingText.slice(0, typingText.length - 1)); //
-        } else {
-          // 다 지워졌다면 다음 단어로 넘어가기
-          setLoopIndex((prev) => prev + 1);
-          setCurrentTypingStep(0);
-          setIsDeleting(false);
-        }
-      }
-    };
-    const timer = setTimeout(handleTyping, speed);
-    return () => clearTimeout(timer);
-  }, [typingText, isDeleting]);
-
-  return <span css={[typingLabel, !isComplete && blink]}>{typingText}</span>;
+  return (
+    <LayoutGroup>
+      <motion.div layout transition={TRANSITION} css={styles.typingWrapper}>
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.div key={currentTextIndex} layout transition={TRANSITION} css={styles.textRotate}>
+            {elements.map((wordObj, wordIndex, array) => {
+              const previousCharsCount = array
+                .slice(0, wordIndex)
+                .reduce((sum, word) => sum + word.characters.length, 0);
+              return (
+                <span key={wordIndex} css={styles.textRotateWord}>
+                  {wordObj.characters.map((char, charIndex) => (
+                    <motion.span
+                      key={charIndex}
+                      initial={INITIAL}
+                      animate={ANIMATE}
+                      exit={EXIT}
+                      css={styles.testRotateElement}
+                      transition={{
+                        ...TRANSITION,
+                        delay: getStaggerDelay(previousCharsCount + charIndex),
+                      }}
+                    >
+                      {char}
+                    </motion.span>
+                  ))}
+                  {wordObj.needsSpace && <span>&nbsp;</span>}
+                </span>
+              );
+            })}
+          </motion.div>
+        </AnimatePresence>
+      </motion.div>
+    </LayoutGroup>
+  );
 };
 
 export default TypingText;
