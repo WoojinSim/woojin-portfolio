@@ -10,6 +10,10 @@ export const wrap = css({
 export const headContainer = css({
   position: "fixed",
   // position: "relative",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  alignContent: "center",
   top: 0,
   left: 0,
   right: 0,
@@ -17,6 +21,8 @@ export const headContainer = css({
   height: "100vh",
   width: "100vw",
   backgroundColor: "#f3f4f6",
+  lineClamp: 1,
+  whiteSpace: "nowrap",
 });
 
 export const contentContainer = css({
@@ -28,12 +34,24 @@ export const contentContainer = css({
 
 export const headLabelContainer = css({
   position: "absolute",
+  display: "flex",
+  gap: "0.5rem",
+  justifyContent: "start",
+  alignItems: "start",
+  alignContent: "start",
+  flexDirection: "column",
   top: "46%",
   left: "15%",
   transform: "translateY(-50%)",
   fontSize: "3.75rem",
+  lineClamp: "1",
   "@media screen and (max-width: 768px)": {
-    left: "5%",
+    position: "relative",
+    alignItems: "center",
+    alignContent: "center",
+    top: "0",
+    left: "0",
+    transform: "translateY(0)",
     fontSize: "3rem",
   },
 });
@@ -44,6 +62,7 @@ export const headLabelInnerContainer = css({
   flexDirection: "row",
   justifyContent: "start",
   alignItems: "center",
+  lineClamp: "1",
   gap: "0.6rem",
   "@media screen and (max-width: 768px)": {
     flexDirection: "column",

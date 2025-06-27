@@ -17,6 +17,8 @@ import {
   headLabelInnerContainer,
 } from "./styles/Home.styles";
 
+const TITLES = ["고민하는", "해결해 내는", "잠 못 드는", "긍정적인", "되짚어보는", "도전하는"];
+
 const Home: React.FC = () => {
   const [isTypingComplete, setIsTypingComplete] = useState<boolean>(false);
 
@@ -32,14 +34,17 @@ const Home: React.FC = () => {
           <div css={headLabelInnerContainer}>
             <span>안녕하세요,</span>
             <TypingText
-              texts={["고민하는", "해결해 내는", "잠 못 드는", "긍정적인", "되짚어보는", "도전하는"]}
+              texts={TITLES}
               rotationInterval={3000}
+              loop
             />
             <span>개발자</span>
           </div>
+          <div>
           <span css={boldText.extra}>심우진</span>
           <span>입니다</span>
           <span css={isTypingComplete && pointedColor}>.</span>
+          </div>
         </div>
       </div>
 
