@@ -13,6 +13,10 @@ export const itemTitleLabel = css({
   fontSize: "2.5rem",
   marginBottom: "50px",
   display: "block",
+  "& b": {
+    color: "#0984E3",
+    fontFamily: "NanumSquareNeoExtraBold",
+  },
 });
 
 export const titleLabel = css({
@@ -22,6 +26,10 @@ export const titleLabel = css({
   marginBottom: "25px", // 여백 증가
   lineHeight: "1.4",
   color: "#2d2d2d",
+  "& b": {
+    color: "#0984E3",
+    fontFamily: "NanumSquareNeoExtraBold",
+  },
 });
 
 export const contentLabel = css({
@@ -31,6 +39,10 @@ export const contentLabel = css({
   lineHeight: "1.8", // 줄간격 추가
   color: "#4a4a4a",
   marginBottom: "8px", // 문단 간격 추가
+  "& b": {
+    color: "#0984E3",
+    fontFamily: "NanumSquareNeoExtraBold",
+  },
 });
 
 export const urlContainer = css({

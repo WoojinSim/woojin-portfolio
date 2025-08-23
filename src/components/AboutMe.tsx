@@ -10,7 +10,7 @@ const AboutMe: React.FC = () => {
   const addScrollAnimationRef = useScrollAnimation();
 
   return (
-    <div css={style.mainContainer}>
+    <section css={style.mainContainer}>
       {/* 프로필 이미지, 개인정보 컨테이너 */}
       <div css={[style.profileContainer, scrollFadeInRight]} ref={addScrollAnimationRef}>
         <div css={style.profileImageWrapper}>
@@ -48,17 +48,21 @@ const AboutMe: React.FC = () => {
 
       {/* 자기소개 컨테이너 */}
       <div css={[scrollFadeInLeft]} ref={addScrollAnimationRef}>
-        <span css={style.itemTitleLabel}>저는,</span>
-        <span css={style.titleLabel}>만드는 것이 그저 즐거운 사람입니다.</span>
+        <span css={style.itemTitleLabel}>
+          저는<b>,</b>
+        </span>
+        <span css={style.titleLabel}>
+          만드는 것이 그저 즐거운 사람입니다<b>.</b>
+        </span>
         <span css={style.contentLabel}>
           아주 사소한 것들이라도, 필요 없어 보이는 것들이라도 결과를 만들어내는 것이 막연히 좋았던 저는
         </span>
         <span css={style.contentLabel}>
-          오늘날, 코딩이라는 수단으로 아이디어를 실현하고, 만들어진 결과물들이 불러오는 변화들이 너무나도
-          소중해졌습니다.
+          오늘날, 코딩이라는 수단으로 아이디어를 실현하고, 만들어진 결과물들이 불러오는 변화들이 너무나도 소중해졌습니다
+          <b>.</b>
         </span>
         <span css={style.contentLabel}>
-          저는, 더욱더 완성도 높은 결과물 빚어내기 위해 노력하고 있는 <strong>심우진</strong>입니다.
+          저는, 더욱더 완성도 높은 결과물 빚어내기 위해 노력하고 있는 <strong>심우진</strong>입니다<b>.</b>
         </span>
 
         {/* 깃허브 컨테이너 */}
@@ -68,7 +72,7 @@ const AboutMe: React.FC = () => {
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

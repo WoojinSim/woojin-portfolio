@@ -57,7 +57,7 @@ const WhatIDid: React.FC = () => {
   }, []);
 
   return (
-    <div css={style.mainContainer}>
+    <section css={style.mainContainer}>
       <div css={[style.mainTitleContainer, scrollFadeInRight]} ref={addScrollAnimationRef}>
         <span css={style.mainTitleLabel}>지금까지 해온 것</span>
         {/* TODO: 카드 순서 역순 기능 추가 시 사용
@@ -197,7 +197,7 @@ const WhatIDid: React.FC = () => {
       {activeModal === "JourneyHub" && <JourneyHubInfo handleModalClose={handleModalClose} />}
       {activeModal === "MedicineAlarm" && <MedicineAlarmInfo handleModalClose={handleModalClose} />}
       {activeModal === "Portfolio" && <PortfolioInfo handleModalClose={handleModalClose} />}
-    </div>
+    </section>
   );
 };
 

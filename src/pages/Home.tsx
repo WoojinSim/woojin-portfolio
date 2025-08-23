@@ -29,33 +29,29 @@ const Home: React.FC = () => {
   return (
     <div css={wrap}>
       {/* 헤더 컨테이너 */}
-      <div css={headContainer}>
+      <header css={headContainer}>
         <div css={headLabelContainer}>
           <div css={headLabelInnerContainer}>
             <span>안녕하세요,</span>
-            <TypingText
-              texts={TITLES}
-              rotationInterval={3000}
-              loop
-            />
+            <TypingText texts={TITLES} rotationInterval={3000} loop />
             <span>개발자</span>
           </div>
           <div>
-          <span css={boldText.extra}>심우진</span>
-          <span>입니다</span>
-          <span css={isTypingComplete && pointedColor}>.</span>
+            <span css={boldText.extra}>심우진</span>
+            <span>입니다</span>
+            <span css={isTypingComplete && pointedColor}>.</span>
           </div>
         </div>
-      </div>
+      </header>
 
       {/* 컨텐츠 컨테이너 */}
-      <div css={contentContainer}>
+      <main css={contentContainer}>
         <AboutMe />
         <Skills />
         <Career />
         <WhatIDid />
         <Footer />
-      </div>
+      </main>
     </div>
   );
 };

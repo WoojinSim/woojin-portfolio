@@ -40,8 +40,8 @@ export const careerItemImageWrapper = css({
   height: "14rem",
   backgroundColor: "white",
   borderRadius: "50%",
-  boxShadow: "0 0 4px 1px rgba(0, 0, 0, 0.3)",
-  marginRight: "4rem",
+  boxShadow: "0 0 20px rgba(0, 0, 0, 0.1)",
+  marginRight: "2rem",
   marginTop: "1rem",
   overflow: "hidden",
   "@media screen and (max-width: 768px)": {
@@ -148,7 +148,10 @@ export const careerItemProjectWrapper = css({
   justifyContent: "start",
   alignItems: "start",
   width: "100%",
-  gap: "0.5rem",
+  gap: "0.8rem",
+  "@media screen and (max-width: 768px)": {
+    gap: "1.2rem",
+  },
 });
 
 export const careerItemProjectContainer = css({
@@ -162,7 +165,7 @@ export const careerItemProjectContainer = css({
   padding: "0.8rem",
   border: "1px solid rgba(0, 0, 0, 0.1)",
   borderRadius: "4px",
-  gap: "0.4rem",
+  gap: "0.6rem",
   // boxShadow: "0 1px 3px rgba(0, 0, 0, 0.1)",
 });
 
@@ -177,6 +180,7 @@ export const careerItemProjectTitleWrapper = css({
     flexDirection: "column",
     alignItems: "center",
     textAlign: "center",
+    gap: "0.4rem",
   },
 });
 
@@ -189,6 +193,9 @@ export const careerItemProjectTitle = css({
     fontFamily: "NanumSquareNeo",
     color: "#454545",
     fontSize: "0.875rem",
+    "@media screen and (max-width: 768px)": {
+      fontSize: "0.7rem",
+    },
   },
 });
 
@@ -202,16 +209,19 @@ export const careerItemProjectDescription = css({
 
 export const careerItemProjectDescriptionList = css({
   display: "flex",
-
   flexDirection: "column",
   justifyContent: "start",
   alignItems: "start",
   margin: "0",
   paddingLeft: "1.2rem",
-  gap: "0.4rem",
+  gap: "0.5rem",
   "& > li": {
     fontFamily: "NanumSquareNeo",
     color: "#454545",
     fontSize: "0.875rem",
+    "& > a": {
+      color: "#0984E3",
+      textDecoration: "none",
+    },
   },
 });
